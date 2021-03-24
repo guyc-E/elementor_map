@@ -1,11 +1,16 @@
 from flask import Flask
 
+from utils import load_data
+
 app = Flask(__name__)
 
+geo_data = load_data()
 
-@app.route('/recent_sites')
-def recent_sites():
-    return site
+
+#
+# @app.route('/recent_sites')
+# def recent_sites():
+#     return site
 
 
 @app.route('/lego')
@@ -20,17 +25,13 @@ def new_site():
 
 @app.route('/counter')
 def counter():
-    return '8,356,865'
+    return 8356865
 
 
-# @app.route('/data')
-# def data():
-#     data = get_data()
-#     geo_data = result_to_geo(data)
-#     return geo_data
+@app.route('/data')
+def data():
+    return geo_data
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
-site = dict(domain='shahar', country='usa', lat='lat', long='long')
