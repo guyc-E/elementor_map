@@ -1,10 +1,12 @@
 import random
 
 from flask import Flask
+from flask_cors import CORS
 
 from utils import load_data
 
 app = Flask(__name__)
+CORS(app)
 
 geo_data = load_data()
 total_site = 10115334
