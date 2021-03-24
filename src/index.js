@@ -182,35 +182,16 @@
         const numberWithCommas = (x) => {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         }
-
         var counter = document.querySelector('.counter');
-        var count = 7342123;
-        counter.innerText = numberWithCommas(count);
-
         setInterval(function(){ 
             fetch("http://3.88.173.61:5000/counter")
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                counter.innerText = numberWithCommas(data.total_site);
             });
-            count = count + 11;
-            counter.innerText = numberWithCommas(count + 11);
         }, 3000);
 
-
-        // function join(t, a, s) {
-        //     function format(m) {
-        //         let f = new Intl.DateTimeFormat('en', m);
-        //         return f.format(t);
-        //     }
-        //     return a.map(format).join(s);
-        // }
-
-        // let s = join(new Date, [{day: 'numeric'}, {month: 'short'}, {year: 'numeric'}], ' ');
-        // console.log(s);
-        // var date = new Date().toLocaleTimeString() + " " + s;
-        // console.log(date);
-
+        //Date
         var today = new Date();
         var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
