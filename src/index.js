@@ -4,7 +4,9 @@ require([
     "esri/layers/TileLayer",
     "esri/Basemap",
     "esri/layers/GeoJSONLayer",
-], function (Map, SceneView, TileLayer, Basemap, GeoJSONLayer) {
+    "esri/Graphic",
+], function (Map, SceneView, TileLayer, Basemap, GeoJSONLayer, Graphic) {
+
 
     const basemap = new Basemap({
         baseLayers: [
@@ -70,11 +72,17 @@ require([
 
 
     //GeoJSONLayer
-    window.extremesLayer = new GeoJSONLayer({
-        url: "extreme-points.geojson",
+    const layer = new GeoJSONLayer({
+        url: "test.json",
         elevationInfo: {
             mode: "absolute-height",
             //offset: offset
+        },
+        definitionExpression: "time >= 4",
+        interval: {
+            // set time interval to one day
+            unit: "days",
+            value: 1
         },
         renderer: {
             type: "simple",
@@ -82,48 +90,46 @@ require([
                 type: "point-3d",
                 symbolLayers: [{
                     type: "icon",
-                    resource: { primitive: "circle" },
-                    material: { color: [0, 0, 0, 0] },
-                    outline: { color: [245, 99, 66, 1], size: 8 },
+                    resource: {primitive: "circle"},
+                    material: {color: [0, 0, 0, 0]},
+                    outline: {color: [245, 99, 66, 1], size: 8},
                     size: 10
                 }, {
                     type: "icon",
-                    resource: { primitive: "circle" },
-                    material: { color: [0, 0, 0, 0] },
-                    outline: { color: [245, 99, 66, 1], size: 4 },
+                    resource: {primitive: "circle"},
+                    material: {color: [0, 0, 0, 0]},
+                    outline: {color: [245, 99, 66, 1], size: 4},
                     size: 30
                 }]
             }
         },
-        popupTemplate: {
-            title: "{name}",
-            content: `
-    <div class="popupImage">
-      <img src="{imageUrl}" alt="{imageCaption}"/>
-    </div>
-    <div class="popupImageCaption">{imageCaption}</div>
-    <div class="popupDescription">
-      <p class="info">
-        <span class="esri-icon-favorites"></span> {type}
-      </p>
-      <p class="info">
-        <span class="esri-icon-map-pin"></span> {location}
-      </p>
-      <p class="info">
-        <span class="esri-icon-documentation"></span> {facts}
-      </p>
-    </div>
-    <div class="popupCredits">
-      Sources: <a href="{sourceUrl}" target="_blank">{source}</a> released under <a href="{sourceCopyrightUrl}">{sourceCopyright}</a>, <a href="{imageCopyrightUrl}" target="_blank">{imageCopyright}</a>.
-    </div>
-  `
-        }
     });
 
+    map.layers.add(layer);
+    var g_counter = 0;
+    view.whenLayerView(layer).then(function (lv) {
+        layerView = lv;
+        layerView.watch("updating", function (value) {
 
-    map.layers.add(extremesLayer);
-    //map.layers.removeAll()
-
+            // availableFields will become available
+            // once the layer view finishes updating
+            if (!value) {
+                layerView.filter = {where:"time >10"};
+                layerView.outfields = ["*"]
+                layerView.queryFeatures({
+                    outFields: layerView.availableFields,
+                    // where: "time > 2"
+                })
+                    .then(function (results) {
+                        console.log(results.features.length, " features returned");
+                        console.log(results.features)
+                    })
+                    .catch(function (error) {
+                        console.log("query failed: ", error);
+                    });
+            }
+        });
+    });
     //go to point
     // view.goTo({
     //     center: [-126, 49],
@@ -140,14 +146,26 @@ require([
     //   return view.goTo(graphic3);
     // });
 
-    // setInterval( () => {
-    //     view.goTo({
-    //         center: [Math.floor(Math.random() * 100) , Math.floor(Math.random() * 100) ],
-    //         zoom: Math.floor(Math.random() * 10),
-    //         tilt: 75,
-    //         heading: 105
-    //     })
-    // }, 3000);
+//     setInterval(() => {
+//         // First create a point geometry
+//
+// // Create a graphic and add the geometry and symbol to it
+//         var pointGraphic = new Graphic({
+//             geometry: point,
+//             symbol: markerSymbol
+//         });
+//         // var expr= "time >=3 "+ Math.random()*10;
+//         var expr = "time >=3 ";
+//         console.log(expr);
+//         layer.definitionExpression = expr;
+//         // addFeature(pointGraphic)
+//         // view.goTo({
+//         //     center: [Math.floor(Math.random() * 100) , Math.floor(Math.random() * 100) ],
+//         //     zoom: Math.floor(Math.random() * 10),
+//         //     tilt: 75,
+//         //     heading: 105
+//         // })
+//     }, 1000);
 
 
 });

@@ -1,0 +1,109 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id":1,
+        "time": 1,
+        "name": "Mount Everest",
+        "type": "Highest point on Earth's surface ○ 8,848m (29,029ft)",
+        "location": "Peak located in the Mahalangur Himal sub-range of the Himalayas on the border of Nepal and China.",
+        "facts": "An expedition in 1924 resulted in one of the greatest mysteries on Everest to this day: George Mallory and Andrew Irvine made a final summit attempt on 8 June but never returned, sparking debate as to whether or not they were the first to reach the top. They had been spotted high on the mountain that day but disappeared in the clouds, never to be seen again, until Mallory's body was found in 1999 at 8,155 m (26,755 ft) on the north face. Officially, the peak was first reached by Sir Edmund Hillary of New Zealand and Sherpa of Nepal Tenzing Norgay in 1953.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg",
+        "imageCaption": "Mount Everest from Kalapatthar",
+        "imageCopyright": "Image by Pavel Novack under CC BY-SA2.5",
+        "imageCopyrightUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+        "source": "Wikipedia Mount Everest article",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+        "sourceCopyright": "CC BY-SA 3.0",
+        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.925061,
+          27.988271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id":2,
+        "time": 2,
+        "name": "Challenger Deep",
+        "type": "Lowest known point on Earth ○ 11,034 m (36,201 ft) below sea level",
+        "location": "At the bottom of the Mariana Trench in the western Pacific Ocean.",
+        "facts": "The first people to reach the ocean floor in the trench were Swiss oceanographer and engineer Jacques Piccard and U.S. Navy Lieutenant Don Walsh. They descended on board of Trieste Bathyscaphe, a submersible designed by Jacques Piccard and his father.",
+        "imageCaption": "Bathyscaphe Trieste",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Bathyscaphe_Trieste.jpg",
+        "imageCopyright": "Bathyscaphe Trieste image under Public Domain",
+        "imageCopyrightUrl": "https://en.wikipedia.org/wiki/Public_domain",
+        "source": "Wikipedia Challenger Deep article",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Challenger_Deep",
+        "sourceCopyright": "CC BY-SA 3.0",
+        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.591667,
+          11.3743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id":3,
+        "time": 3,
+        "name": "Ojos del Salado",
+        "type": "Highest active volcano summit ○ 6,061 m (22,838 ft)",
+        "location": "In the Andes on the Argentina-Chile border.",
+        "facts": "The name of the mountain means <em>Eyes of the Salty One</em> in Spanish and it comes from the enormous deposits of salt that, in the form of lagoons or 'eyes', appear in its glaciers.",
+        "imageCaption": "Ojos del Salado volcano looming on the horizon",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ojos_del_Salado_looming_big_on_the_horizon.jpg",
+        "imageCopyright": "Image by Jespinos under CC BY-SA 2.0",
+        "imageCopyrightUrl": "https://en.wikipedia.org/wiki/Ojos_del_Salado#/media/File:Ojos_del_Salado_looming_big_on_the_horizon.jpg",
+        "source": "Ojos del Salado wikipedia article",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Ojos_del_Salado",
+        "sourceCopyright": "CC BY-SA 3.0",
+        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.541389,
+          -27.109722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id":4,
+        "time": 4,
+        "name": "Eurasian Pole of Inaccessibility (EPIA)",
+        "type": "Most distant point from an ocean ○ 2,645 km (1,644 miles) from the nearest coastline",
+        "location": "In China's Xinjiang region, near the border with Kazakhstan",
+        "facts": "A pole of inaccessibility is defined as the location furthest from any ocean. Each continent has its own pole of innaccessibility, but EPIA has the largest distance from the ocean. There are several debates on where exactly this point lies, depending on how the coastline is defined. In 2007, <a href='http://diapiro.ictja.csic.es/gt/danielgc/papers/Garcia-Castellanos,%20Lombardo,%202007,%20SGJ.pdf' target='_blank'>this study</a> concluded that the Gulf of Ob is part of the ocean and this new pole was established to be the furthest from the ocean.",
+        "imageCaption": "",
+        "imageUrl": "https://www.atlasandboots.com/wp-content/uploads/2016/04/Poles-of-inaccessibility-eurasian-1.jpg",
+        "imageCopyright": "Image by Colegota under CC BY-SA 3.0",
+        "imageCopyrightUrl": "https://www.atlasandboots.com/poles-of-inaccessibility-middle-nowhere/",
+        "source": "Pole of inaccessibility Wikipedia article",
+        "sourceUrl": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility",
+        "sourceCopyright": "CC BY-SA 3.0",
+        "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.666667,
+          46.283333
+        ]
+      }
+    }
+  ]
+}
