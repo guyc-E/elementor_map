@@ -7,7 +7,7 @@ from utils import load_data
 app = Flask(__name__)
 
 geo_data = load_data()
-total_site = 8356865
+total_site = 10115334
 
 
 #
@@ -33,13 +33,21 @@ def counter():
     return {'total_site': total_site}
 
 
+top_countires_data = [('United States', 4952631),
+                      ('Germany', 1245937),
+                      ('United Kingdom', 714450),
+                      ('France', 623616),
+                      ('Netherlands', 573801),
+                      ('Singapore', 385251),
+                      ('Cyprus', 377999),
+                      ('Poland', 341323),
+                      ('Italy', 302292)]
+
+
 @app.route('/top_countries')
 def top_countries():
-    return {'data': [
-        {'name': 'england', 'sites': 10},
-        {'name': 'Israel', 'sites': 100}
-    ]
-    }
+    return {'data': [{'name': x[0], 'sites': x[1]} for x in top_countires_data]
+            }
 
 
 @app.route('/data')
