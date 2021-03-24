@@ -30,7 +30,7 @@ def new_site():
 def counter():
     global total_site
     total_site = total_site + random.randint(0, 10)
-    return str(total_site)
+    return {'total_site': total_site}
 
 
 @app.route('/top_countries')
