@@ -128,9 +128,9 @@
     
 
         // Load Points
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
+        // function sleep(ms) {
+        //     return new Promise(resolve => setTimeout(resolve, ms));
+        // }
     
         function addFeature(feature) {
             const attributes = {};
@@ -159,12 +159,14 @@
             });
             return promise;
         }
-    
-        fetch("../websites.json")
+
+
+
+        fetch("http://3.88.173.61:5000/data")
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            data.forEach( ( feature, index ) => {
+            console.log(data.features)
+            data.features.forEach( ( feature, index ) => {
                 setTimeout(function(){
                     addFeature( feature ).then( () => {
                         view.goTo({
@@ -174,9 +176,35 @@
                             //heading: 105
                         })
                     } );
-                }, (index + 1) * 3000);                
+                }, (index + 1) * 5000);                
             });
         });
+
+
+        // fetch("../websites.json")
+        // .then(response => response.json())
+        // .then(data => {
+        //     console.log(data)
+        //     data.forEach( ( feature, index ) => {
+        //         setTimeout(function(){
+        //             addFeature( feature ).then( () => {
+        //                 view.goTo({
+        //                     center: [ feature.geometry.coordinates[0] , feature.geometry.coordinates[1] ],
+        //                     zoom: 3,
+        //                     tilt: 75,
+        //                     //heading: 105
+        //                 })
+        //             } );
+        //         }, (index + 1) * 3000);                
+        //     });
+        // });
+
+        //top countries
+        // fetch("http://3.88.173.61:5000/top_countries")
+        // .then(response => response.json())
+        // .then(data => {
+        //     console.log(data.data)
+        // });
 
         // Change Counter
         const numberWithCommas = (x) => {
