@@ -7,6 +7,7 @@ from utils import load_data
 app = Flask(__name__)
 
 geo_data = load_data()
+total_site = 8356865
 
 
 #
@@ -27,7 +28,18 @@ def new_site():
 
 @app.route('/counter')
 def counter():
-    return 8356865
+    global total_site
+    total_site = total_site + random.randint(0, 10)
+    return str(total_site)
+
+
+@app.route('/top_countries')
+def top_countries():
+    return {'data': [
+        {'name': 'england', 'sites': 10},
+        {'name': 'Israel', 'sites': 100}
+    ]
+    }
 
 
 @app.route('/data')
