@@ -1,3 +1,5 @@
+import random
+
 from flask import Flask
 
 from utils import load_data
@@ -20,7 +22,7 @@ def lego():
 
 @app.route('/new_site')
 def new_site():
-    return "1"
+    return str(random.randint(0, 1))
 
 
 @app.route('/counter')
