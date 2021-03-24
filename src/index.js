@@ -85,15 +85,17 @@
                         type: "icon",
                         resource: { primitive: "circle" },
                         material: { color: [0, 0, 0, 0] },
-                        outline: { color: [1, 1, 1, 1], size: 8 },
+                        outline: { color: [1, 1, 1, 1], size: 1 },
                         size: 10
-                    }, {
-                        type: "icon",
-                        resource: { primitive: "circle" },
-                        material: { color: [0, 0, 0, 0] },
-                        outline: { color: [245, 99, 66, 1], size: 4 },
-                        size: 30
-                    }]
+                    }, 
+                    // {
+                    //     type: "icon",
+                    //     resource: { primitive: "circle" },
+                    //     material: { color: [0, 0, 0, 0] },
+                    //     outline: { color: [245, 99, 66, 1], size: 4 },
+                    //     size: 30
+                    // }
+                ]
                 }
             },
             popupTemplate: {
@@ -124,6 +126,8 @@
         map.layers.add(extremesLayer);
         //map.layers.removeAll()
     
+
+        // Load Points
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
@@ -156,7 +160,6 @@
             return promise;
         }
     
-
         fetch("../websites.json")
         .then(response => response.json())
         .then(data => {
@@ -166,14 +169,70 @@
                     addFeature( feature ).then( () => {
                         view.goTo({
                             center: [ feature.geometry.coordinates[0] , feature.geometry.coordinates[1] ],
-                            //zoom: 2,
-                            //tilt: 75,
+                            zoom: 3,
+                            tilt: 75,
                             //heading: 105
                         })
                     } );
                 }, (index + 1) * 3000);                
             });
         });
+
+        // Change Counter
+        const numberWithCommas = (x) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        var counter = document.querySelector('.counter');
+        var count = 7342123;
+        counter.innerText = numberWithCommas(count);
+
+        setInterval(function(){ 
+            // fetch("http://3.88.173.61:5000/counter")
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log(data);
+            // });
+            count = count + 11;
+            counter.innerText = numberWithCommas(count + 11);
+        }, 3000);
+
+
+        // function join(t, a, s) {
+        //     function format(m) {
+        //         let f = new Intl.DateTimeFormat('en', m);
+        //         return f.format(t);
+        //     }
+        //     return a.map(format).join(s);
+        // }
+
+        // let s = join(new Date, [{day: 'numeric'}, {month: 'short'}, {year: 'numeric'}], ' ');
+        // console.log(s);
+        // var date = new Date().toLocaleTimeString() + " " + s;
+        // console.log(date);
+
+        var today = new Date();
+        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+
+        setInterval(() => {
+            var time = today.getHours()+":"+today.getMinutes()+" | "+monthNames[today.getMonth()]+today.getDate()+", "+today.getFullYear();
+            document.querySelector('.date').innerHTML = time;
+        }, 60000);
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+
     
     
     });

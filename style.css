@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Ivar";
+  src: url(fonts/IvarText-Bold.ttf);
+}
+
 html,
 body,
 #viewDiv,
@@ -7,15 +12,20 @@ body,
   height: 100%;
   width: 100%;
   color: #323232;
-  font-family: "Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Ivar, Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-body {
+/* body {
   background: radial-gradient(#12bff2, #0269a1);
-}
+} */
 
 #viewDiv canvas {
   filter: saturate(1.2) drop-shadow(0 0 20px white);
+}
+
+#viewDiv{
+  height: calc( 100vh - 70px );
+  /* margin-top:70px; */
 }
 
 
@@ -68,4 +78,66 @@ p.info {
 
 .esri-attribution__sources a {
   color: #323232;
+}
+
+canvas::after{
+  display:none!important;
+}
+
+/* App */
+
+header{
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
+}
+
+main{
+  /* background: red; */
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: calc( 100vh - 70px );
+  pointer-events: none;
+  color: #0C0D0E;
+}
+
+.data{
+  /* background: green; */
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  padding:10px 40px;
+}
+
+.data .bottom{
+  margin-top: auto;
+}
+
+.title{
+  font-size:16px;
+}
+
+.counter{
+  font-size: 94px;
+  font-weight: bold;
+  font-family: Ivar;
+}
+
+.date{
+  font-size:20px;
+  font-weight: bold;
+  font-family: Ivar;
+}
+
+.location{
+  font-size:14px;
+}
+
+.esri-attribution{
+  display:none;
 }
