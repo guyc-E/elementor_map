@@ -87,12 +87,40 @@ canvas::after{
 /* App */
 
 header{
+  align-items: stretch;
   padding: 0 40px;
   display: flex;
-  align-items: center;
   position: relative;
   z-index: 1;
   box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
+}
+
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 40px;
+    color: #000;
+    position:relative;
+    font-family: Ivar;
+}
+
+header a:first-of-type{
+  margin-left: 80px;
+
+}
+
+header a.active{
+  border-bottom: 2px solid #46F2B6;
+}
+
+header a.active:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #46F2B6;
+  border-radius: 50%;
+  margin-left: 6px;
 }
 
 main{

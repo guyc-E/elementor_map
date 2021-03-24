@@ -188,11 +188,11 @@
         counter.innerText = numberWithCommas(count);
 
         setInterval(function(){ 
-            // fetch("http://3.88.173.61:5000/counter")
-            // .then(response => response.json())
-            // .then(data => {
-            //     console.log(data);
-            // });
+            fetch("http://3.88.173.61:5000/counter")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
             count = count + 11;
             counter.innerText = numberWithCommas(count + 11);
         }, 3000);
