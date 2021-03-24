@@ -1,7 +1,5 @@
 from flask import Flask
 
-from result_to_geo import get_data, result_to_geo
-
 app = Flask(__name__)
 
 
