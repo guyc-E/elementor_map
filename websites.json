@@ -1,0 +1,71 @@
+[
+    {
+        "properties": {
+            "name": "Mount Everest",
+            "type": "Highest point on Earth's surface ○ 8,848m (29,029ft)",
+            "location": "Peak located in the Mahalangur Himal sub-range of the Himalayas on the border of Nepal and China.",
+            "facts": "An expedition in 1924 resulted in one of the greatest mysteries on Everest to this day: George Mallory and Andrew Irvine made a final summit attempt on 8 June but never returned, sparking debate as to whether or not they were the first to reach the top. They had been spotted high on the mountain that day but disappeared in the clouds, never to be seen again, until Mallory's body was found in 1999 at 8,155 m (26,755 ft) on the north face. Officially, the peak was first reached by Sir Edmund Hillary of New Zealand and Sherpa of Nepal Tenzing Norgay in 1953.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg",
+            "imageCaption": "Mount Everest from Kalapatthar",
+            "imageCopyright": "Image by Pavel Novack under CC BY-SA2.5",
+            "imageCopyrightUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "Wikipedia Mount Everest article",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+            "sourceCopyright": "CC BY-SA 3.0",
+            "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        },
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                49.882222,
+                40.395278
+            ]
+        }
+    },
+    {
+        "properties": {
+            "name": "Test",
+            "type": "Highest point on Earth's surface ○ 8,848m (29,029ft)",
+            "location": "Peak located in the Mahalangur Himal sub-range of the Himalayas on the border of Nepal and China.",
+            "facts": "An expedition in 1924 resulted in one of the greatest mysteries on Everest to this day: George Mallory and Andrew Irvine made a final summit attempt on 8 June but never returned, sparking debate as to whether or not they were the first to reach the top. They had been spotted high on the mountain that day but disappeared in the clouds, never to be seen again, until Mallory's body was found in 1999 at 8,155 m (26,755 ft) on the north face. Officially, the peak was first reached by Sir Edmund Hillary of New Zealand and Sherpa of Nepal Tenzing Norgay in 1953.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg",
+            "imageCaption": "Mount Everest from Kalapatthar",
+            "imageCopyright": "Image by Pavel Novack under CC BY-SA2.5",
+            "imageCopyrightUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "Wikipedia Mount Everest article",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+            "sourceCopyright": "CC BY-SA 3.0",
+            "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        },
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                108.126761,
+                53.607026
+            ]
+        }
+    },
+    {
+        "properties": {
+            "name": "Test2",
+            "type": "Highest point on Earth's surface ○ 8,848m (29,029ft)",
+            "location": "Peak located in the Mahalangur Himal sub-range of the Himalayas on the border of Nepal and China.",
+            "facts": "An expedition in 1924 resulted in one of the greatest mysteries on Everest to this day: George Mallory and Andrew Irvine made a final summit attempt on 8 June but never returned, sparking debate as to whether or not they were the first to reach the top. They had been spotted high on the mountain that day but disappeared in the clouds, never to be seen again, until Mallory's body was found in 1999 at 8,155 m (26,755 ft) on the north face. Officially, the peak was first reached by Sir Edmund Hillary of New Zealand and Sherpa of Nepal Tenzing Norgay in 1953.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Everest_kalapatthar.jpg",
+            "imageCaption": "Mount Everest from Kalapatthar",
+            "imageCopyright": "Image by Pavel Novack under CC BY-SA2.5",
+            "imageCopyrightUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+            "source": "Wikipedia Mount Everest article",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Mount_Everest",
+            "sourceCopyright": "CC BY-SA 3.0",
+            "sourceCopyrightUrl": "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"
+        },
+        "geometry": {
+            "type": "point",
+            "coordinates": [
+                86.666667,
+                46.283333
+            ]
+        }
+    }
+]
