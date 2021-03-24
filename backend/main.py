@@ -31,6 +31,6 @@ def counter():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
 
 site = dict(domain='shahar', country='usa', lat='lat', long='long')
