@@ -1,6 +1,7 @@
 import geoip2.database
 import csv
 
+# /home/ec2-user/code/elementor_map/backend/geolite2
 reader_city = geoip2.database.Reader('./geolite2/GeoLite2-City.mmdb')
 reader_country = geoip2.database.Reader('./geolite2/GeoLite2-Country.mmdb')
 
@@ -41,11 +42,15 @@ def row_to_feature(row):
     city_res = reader_city.city(row['track_ip'])
     lat = city_res.location.latitude
     lon = city_res.location.longitude
+    country = city_res.country.name
+    iso_code = city_res.country.iso_code
 
     res = {
         'type': 'Feature',
         'properties': {
             'name': row['track_domain'].replace('http://', '').replace('https://', ''),
+            'country': country,
+            'iso_code': iso_code
         },
         'geometry': {
             'type': 'Point',
