@@ -84,7 +84,8 @@
                     symbolLayers: [{
                         type: "icon",
                         resource: { primitive: "circle" },
-                        material: { color: [0, 0, 0, 0] },
+                        material: { color: [70, 242, 182, 0] },
+                        // rgb(70, 242, 182)
                         outline: { color: [1, 1, 1, 1], size: 1 },
                         size: 10
                     }, 
@@ -149,10 +150,10 @@
         .then(response => response.json())
         .then(data => {
             //console.log(data.features)
-            
+            var indexImg = 0;
             data.features.forEach( ( feature, index ) => {
                 
-                setTimeout(function(){
+                setTimeout(function(index){
                     addFeature( feature ).then( () => {
                         view.goTo({
                             center: [ feature.geometry.coordinates[0] , feature.geometry.coordinates[1] ],
@@ -161,16 +162,16 @@
                             //heading: 105
                         })
                     });
-                    // var indexImg = 0;
-                    // indexImg += 1;
-                    // if(indexImg > 10){
-                    //     indexImg = 0;
-                    // }
+                    
+                    indexImg += 1;
+                    if(indexImg > 3){
+                        indexImg = 0;
+                    }
                     $('#popup img').show();
                     $('#popup .popup-title').text(feature.properties.name);
                     $('#popup .popup-country-name').text(feature.properties.country);
                     $('#popup .popup-country-code').text(feature.properties.iso_code);
-                    $('#popup img').attr('src','images/popup/'+index+'.png');
+                    $('#popup img').attr('src','images/popup/'+indexImg+'.png');
                     consol
                 }, (index + 1) * 5000);                
             });
