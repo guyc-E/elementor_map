@@ -258,13 +258,26 @@ main{
 }
 
 #myBtn{
+  display: flex;
+    align-items: center;
   position: fixed;
     z-index: 5;
-    top: 0;
-    right: 0;
+    top: 90px;
+    right: 40px;
     background: #0C0D0E;
     color: #fff;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-radius: 26px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#myBtn:hover{
+  background: #232629;
+}
+
+#myBtn img{
+  margin-right:10px;
 }
