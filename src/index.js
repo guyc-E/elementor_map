@@ -62,8 +62,8 @@
                 collapseEnabled: false
             },
             highlightOptions: {
-                color: [255, 255, 255],
-                haloOpacity: 0.5
+                color: [70, 242, 182],
+                haloOpacity: 1
             }
         });
     
