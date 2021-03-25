@@ -256,3 +256,15 @@ main{
 .country:nth-of-type(6) .country-name {
   width: 20%;
 }
+
+#myBtn{
+  position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background: #0C0D0E;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 26px;
+}
