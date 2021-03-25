@@ -145,13 +145,13 @@
             return promise;
         }
 
-
-
         fetch("http://3.88.173.61:5000/data")
         .then(response => response.json())
         .then(data => {
             //console.log(data.features)
+            
             data.features.forEach( ( feature, index ) => {
+                
                 setTimeout(function(){
                     addFeature( feature ).then( () => {
                         view.goTo({
@@ -160,7 +160,18 @@
                             tilt: 75,
                             //heading: 105
                         })
-                    } );
+                    });
+                    // var indexImg = 0;
+                    // indexImg += 1;
+                    // if(indexImg > 10){
+                    //     indexImg = 0;
+                    // }
+                    $('#popup img').show();
+                    $('#popup .popup-title').text(feature.properties.name);
+                    $('#popup .popup-country-name').text(feature.properties.country);
+                    $('#popup .popup-country-code').text(feature.properties.iso_code);
+                    $('#popup img').attr('src','images/popup/'+index+'.png');
+                    consol
                 }, (index + 1) * 5000);                
             });
         });
