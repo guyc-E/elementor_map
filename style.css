@@ -156,7 +156,6 @@ header a.active:after {
 }
 
 main{
-  /* background: red; */
   position: fixed;
   z-index: 2;
   display: flex;
@@ -167,8 +166,7 @@ main{
 }
 
 .data{
-  /* background: green; */
-  height: 85%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding:10px 40px;
@@ -176,6 +174,10 @@ main{
 
 .data .bottom{
   margin-top: 40px;
+}
+
+.data .top{
+  margin-top: 30px;
 }
 
 .title{
@@ -205,6 +207,10 @@ main{
 .top-countries{
   margin-top:auto;
   max-width: 300px;
+  background: rgba(255,255,255,0.6);
+  padding: 30px;
+  position: relative;
+  left: -30px;
 }
 
 .country-title{
@@ -216,6 +222,7 @@ main{
 
 .country{
   display:flex;
+  white-space: nowrap;
 }
 
 .country-count {
@@ -237,10 +244,10 @@ main{
   width: 70%;
 }
 .country:nth-of-type(3) .country-name {
-  width: 40%;
+  width: 35%;
 }
 .country:nth-of-type(4) .country-name {
-  width: 34%;
+  width: 32%;
 }
 .country:nth-of-type(5) .country-name {
   width: 30%;

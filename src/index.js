@@ -150,7 +150,7 @@
         fetch("http://3.88.173.61:5000/data")
         .then(response => response.json())
         .then(data => {
-            console.log(data.features)
+            //console.log(data.features)
             data.features.forEach( ( feature, index ) => {
                 setTimeout(function(){
                     addFeature( feature ).then( () => {
@@ -185,11 +185,14 @@
         // });
 
         //top countries
-        // fetch("http://3.88.173.61:5000/top_countries")
-        // .then(response => response.json())
-        // .then(data => {
-        //     console.log(data.data)
-        // });
+        fetch("http://3.88.173.61:5000/top_countries")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.data)
+            for(var i = 0; i < 5; i++){
+                $('.top-countries').append('<div class="country"><div class="country-name">'+data.data[i].name+'</div><div class="country-count">'+data.data[i].sites+'</div></div>');
+            }
+        });
 
         // Change Counter
         const numberWithCommas = (x) => {
