@@ -1,4 +1,5 @@
 import random
+import time
 
 from flask import Flask
 from flask_cors import CORS
@@ -9,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 geo_data = load_data()
-total_site = 10115334
+total_site = 8357473
 
 
 #
@@ -25,7 +26,7 @@ def lego():
 
 @app.route('/new_site')
 def new_site():
-    return str(random.randint(0, 1))
+    return str(round(time.time()) % 2)
 
 
 @app.route('/counter')
