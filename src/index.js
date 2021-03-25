@@ -99,26 +99,11 @@
                 }
             },
             popupTemplate: {
-                title: "{name}",
+                title: "<div>{name}</div><div>{country}</div>",
                 content: `
-        <div class="popupImage">
-          <img src="{imageUrl}" alt="{imageCaption}"/>
-        </div>
-        <div class="popupImageCaption">{imageCaption}</div>
-        <div class="popupDescription">
-          <p class="info">
-            <span class="esri-icon-favorites"></span> {type}
-          </p>
-          <p class="info">
-            <span class="esri-icon-map-pin"></span> {location}
-          </p>
-          <p class="info">
-            <span class="esri-icon-documentation"></span> {facts}
-          </p>
-        </div>
-        <div class="popupCredits">
-          Sources: <a href="{sourceUrl}" target="_blank">{source}</a> released under <a href="{sourceCopyrightUrl}">{sourceCopyright}</a>, <a href="{imageCopyrightUrl}" target="_blank">{imageCopyright}</a>.
-        </div>
+                    <div class="popupDescription">
+
+                    </div>
       `
             }
         });
@@ -229,19 +214,27 @@
             var time = today.getHours()+":"+today.getMinutes()+" | "+monthNames[today.getMonth()]+today.getDate()+", "+today.getFullYear();
             document.querySelector('.date').innerHTML = time;
         }, 60000);
-        
 
-        
-        
-        
-        
-        
-        
-        
-
-        
-        
-
-    
-    
     });
+
+    $( document ).ready(function() {
+        $('.discover').on('click', () => {
+            $('.discover').addClass('active');
+            $('.live').removeClass('active');
+        
+            $('iframe').show();
+            $('main, #viewDiv').hide();
+        
+        });
+    
+        $('.live').on('click', () => {
+            $('.live').addClass('active');
+            $('.discover').removeClass('active');
+        
+            $('iframe').hide();
+            $('main, #viewDiv').show();
+        
+        });
+    });
+
+

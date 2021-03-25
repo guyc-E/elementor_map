@@ -84,6 +84,38 @@ canvas::after{
   display:none!important;
 }
 
+.esri-popup__header{
+  background: #323232;
+  color: #fff;
+  padding:2px;
+}
+
+.esri-icon-close:before{
+  color:#fff;
+}
+
+.esri-popup__button:hover{
+  background-color: #323232;
+}
+
+h2.esri-popup__header-title:hover {
+  background: #323232;
+}
+
+.popupDescription{
+  background: #C4C4C4;
+  border: 13px solid #323232;
+  min-height: 190px;
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+  z-index: 54;
+  position: relative;
+  display:none;
+}
+
 /* App */
 
 header{
@@ -100,7 +132,7 @@ header a{
     align-items: center;
     text-decoration: none;
     padding: 0 40px;
-    color: #000;
+    color: #323232;
     position:relative;
     font-family: Ivar;
 }
@@ -136,14 +168,14 @@ main{
 
 .data{
   /* background: green; */
-  height: 70%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   padding:10px 40px;
 }
 
 .data .bottom{
-  margin-top: auto;
+  margin-top: 40px;
 }
 
 .title{
@@ -168,4 +200,51 @@ main{
 
 .esri-attribution{
   display:none;
+}
+
+.top-countries{
+  margin-top:auto;
+  max-width: 300px;
+}
+
+.country-title{
+  font-weight: bold;
+  font-family: Ivar;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.country{
+  display:flex;
+}
+
+.country-count {
+  margin-left: auto;
+}
+
+.country-name {
+  background: #46F2B6;
+  padding: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.country:nth-of-type(1){
+  width:300px;
+}
+
+.country:nth-of-type(2) .country-name {
+  width: 70%;
+}
+.country:nth-of-type(3) .country-name {
+  width: 40%;
+}
+.country:nth-of-type(4) .country-name {
+  width: 34%;
+}
+.country:nth-of-type(5) .country-name {
+  width: 30%;
+}
+.country:nth-of-type(6) .country-name {
+  width: 20%;
 }
