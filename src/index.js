@@ -164,7 +164,7 @@
                     });
                     
                     indexImg += 1;
-                    if(indexImg > 3){
+                    if(indexImg > 35){
                         indexImg = 0;
                     }
                     $('#popup img').show();
