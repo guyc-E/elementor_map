@@ -183,6 +183,9 @@
         //         }, (index + 1) * 3000);                
         //     });
         // });
+        const numberWithCommas = (x) => {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
 
         //top countries
         fetch("http://3.88.173.61:5000/top_countries")
@@ -190,14 +193,11 @@
         .then(data => {
             console.log(data.data)
             for(var i = 0; i < 5; i++){
-                $('.top-countries').append('<div class="country"><div class="country-name">'+data.data[i].name+'</div><div class="country-count">'+data.data[i].sites+'</div></div>');
+                $('.top-countries').append('<div class="country"><div class="country-name">'+data.data[i].name+'</div><div class="country-count">'+numberWithCommas(data.data[i].sites)+'</div></div>');
             }
         });
 
         // Change Counter
-        const numberWithCommas = (x) => {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        }
         var counter = document.querySelector('.counter');
         setInterval(function(){ 
             fetch("http://3.88.173.61:5000/counter")

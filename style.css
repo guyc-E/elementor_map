@@ -223,6 +223,8 @@ main{
 .country{
   display:flex;
   white-space: nowrap;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
 .country-count {
@@ -233,7 +235,6 @@ main{
   background: #46F2B6;
   padding: 6px;
   font-size: 14px;
-  margin-bottom: 16px;
 }
 
 .country:nth-of-type(1){
