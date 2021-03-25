@@ -12,7 +12,7 @@ body,
   height: 100%;
   width: 100%;
   color: #323232;
-  font-family: "Ivar, Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Ivar, Avenir Next","Helvetica Neue",Helvetica,Arial,sans-serif!important;
 }
 
 /* body {
@@ -123,7 +123,7 @@ header{
   padding: 0 40px;
   display: flex;
   position: relative;
-  z-index: 1;
+  z-index: 9999;
   box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
 }
 
@@ -259,6 +259,7 @@ main{
 
 #myBtn{
   display: flex;
+  display:none;
     align-items: center;
   position: fixed;
     z-index: 5;
@@ -280,4 +281,22 @@ main{
 
 #myBtn img{
   margin-right:10px;
+}
+
+#popup{
+  position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 20px;
+    background: #fff;
+}
+
+.popup-title{
+  font-weight: bold;
+  font-family: Ivar;
+  font-size: 20px;
+}
+
+.popup-country{
+  margin: 10px 0;
 }
