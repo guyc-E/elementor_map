@@ -85,7 +85,7 @@
                         type: "icon",
                         resource: { primitive: "circle" },
                         material: { color: [0, 0, 0, 0] },
-                        outline: { color: [1, 1, 1, 1], size: 1 },
+                        outline: { color: [70,242,182, 1], size: 10 },
                         size: 10
                     }, 
                     // {
@@ -157,7 +157,7 @@
                         view.goTo({
                             center: [ feature.geometry.coordinates[0] , feature.geometry.coordinates[1] ],
                             zoom: 3,
-                            tilt: 75,
+                            tilt: 0,
                             //heading: 105
                         })
                     });

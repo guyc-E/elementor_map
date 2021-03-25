@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/backend/domains_to_coutry.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/backend/main.py">
           <value>
             <Attribute>
