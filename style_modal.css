@@ -117,7 +117,7 @@ div #modalDiv {
 .image-list-small li {
   display: inline-block;
   width: 340px;
-  margin: 0 12px 30px;
+  margin: 0 12px 40px;
 }
 
 
@@ -148,7 +148,7 @@ div #modalDiv {
 
 .image-list-small .details h3 {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   margin: 0 0 3px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -169,6 +169,8 @@ div #modalDiv {
 }
 
 #envelope {
-  width: 14px;
-  height: 12px;
+  display: block;
+  padding: 0 3px;
+  float: left;
+  width: 18px;
 }

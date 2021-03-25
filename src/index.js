@@ -30,7 +30,7 @@ require([
         camera: {
             position: [-55.03975781, 14.94826384, 19921223.30821],
             heading: 2.03,
-            tilt: 0
+            tilt: 0.12
         },
         environment: {
             background: {
