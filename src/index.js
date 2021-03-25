@@ -35,8 +35,8 @@
             environment: {
                 background: {
                     type: "color",
-                    color: [255, 255, 255, 255]
-                    //color: [255, 252, 244, 0]
+                    //color: [255, 255, 255, 255]
+                    color: [250, 250, 250, 250]
                 },
                 starsEnabled: false,
                 atmosphereEnabled: false,
@@ -62,7 +62,7 @@
                 collapseEnabled: false
             },
             highlightOptions: {
-                color: [70, 242, 182],
+                color: [250, 250, 250, 250],
                 haloOpacity: 1
             }
         });
@@ -98,14 +98,14 @@
                 ]
                 }
             },
-            popupTemplate: {
-                title: "<div>{name}</div><div>{country}</div>",
-                content: `
-                    <div class="popupDescription">
-
-                    </div>
-      `
-            }
+    //         popupTemplate: {
+    //             title: "<div>{name}</div><div>{country}</div>",
+    //             content: `
+    //                 <div class="popupDescription">
+    //                     <img src="default.png" />
+    //                 </div>
+    //   `
+    //         }
         });
     
         map.layers.add(extremesLayer);
@@ -227,6 +227,9 @@
         
             $('iframe').show();
             $('main, #viewDiv').hide();
+            $('#popup').hide();
+
+            $('#myBtn').css('display', 'flex');
         
         });
     
@@ -236,7 +239,8 @@
         
             $('iframe').hide();
             $('main, #viewDiv').show();
-        
+            $('#myBtn').hide();
+            $('#popup').show();
         });
     });
 
