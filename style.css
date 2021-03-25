@@ -84,19 +84,78 @@ canvas::after{
   display:none!important;
 }
 
+.esri-popup__header{
+  background: #323232;
+  color: #fff;
+  padding:2px;
+}
+
+.esri-icon-close:before{
+  color:#fff;
+}
+
+.esri-popup__button:hover{
+  background-color: #323232;
+}
+
+h2.esri-popup__header-title:hover {
+  background: #323232;
+}
+
+.popupDescription{
+  background: #C4C4C4;
+  border: 13px solid #323232;
+  min-height: 190px;
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+  z-index: 54;
+  position: relative;
+  display:none;
+}
+
 /* App */
 
 header{
+  align-items: stretch;
   padding: 0 40px;
   display: flex;
-  align-items: center;
   position: relative;
   z-index: 1;
   box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
 }
 
+header a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 40px;
+    color: #323232;
+    position:relative;
+    font-family: Ivar;
+}
+
+header a:first-of-type{
+  margin-left: 80px;
+
+}
+
+header a.active{
+  border-bottom: 2px solid #46F2B6;
+}
+
+header a.active:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #46F2B6;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
 main{
-  /* background: red; */
   position: fixed;
   z-index: 2;
   display: flex;
@@ -107,15 +166,18 @@ main{
 }
 
 .data{
-  /* background: green; */
-  height: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding:10px 40px;
 }
 
 .data .bottom{
-  margin-top: auto;
+  margin-top: 40px;
+}
+
+.data .top{
+  margin-top: 30px;
 }
 
 .title{
@@ -140,4 +202,69 @@ main{
 
 .esri-attribution{
   display:none;
+}
+
+.top-countries{
+  margin-top:auto;
+  max-width: 300px;
+  background: rgba(255,255,255,0.6);
+  padding: 30px;
+  position: relative;
+  left: -30px;
+}
+
+.country-title{
+  font-weight: bold;
+  font-family: Ivar;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.country{
+  display:flex;
+  white-space: nowrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.country-count {
+  margin-left: auto;
+}
+
+.country-name {
+  background: #46F2B6;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.country:nth-of-type(1){
+  width:300px;
+}
+
+.country:nth-of-type(2) .country-name {
+  width: 70%;
+}
+.country:nth-of-type(3) .country-name {
+  width: 35%;
+}
+.country:nth-of-type(4) .country-name {
+  width: 32%;
+}
+.country:nth-of-type(5) .country-name {
+  width: 30%;
+}
+.country:nth-of-type(6) .country-name {
+  width: 20%;
+}
+
+#myBtn{
+  position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    background: #0C0D0E;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 26px;
 }
